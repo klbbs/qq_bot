@@ -1,0 +1,5 @@
+name: qq-file-read
+version: 0.1.0
+description: Download one QQ group file and return its text, read-only, for group members.
+provides_tools:
+  - qq_group_file_read

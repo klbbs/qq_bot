@@ -1,0 +1,18 @@
+{
+  "enabled": true,
+  "collapse_split": true,
+  "friend_auto_accept": false,
+  "global_interval": 1.0,
+  "private_interval": 2.0,
+  "group_interval": 3.0,
+  "global_per_minute": 30,
+  "private_per_minute": 20,
+  "group_per_minute": 12,
+  "duplicate_seconds": 20.0,
+  "uncertain_seconds": 600.0,
+  "network_backoff": 30.0,
+  "risk_backoff": 600.0,
+  "max_backoff": 1800.0,
+  "max_wait": 20.0,
+  "max_pending": 12
+}

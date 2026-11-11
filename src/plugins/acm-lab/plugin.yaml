@@ -1,0 +1,5 @@
+name: acm-lab
+version: 0.1.0
+description: Read-only connection to the owner's deployed ACM Lab; local interactive login.
+provides_tools:
+  - acm_lab

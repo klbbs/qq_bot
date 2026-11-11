@@ -1,0 +1,248 @@
+{
+  "version": "1.4.0",
+  "read_operations": [
+    "profile",
+    "group",
+    "members",
+    "history",
+    "message",
+    "group_files",
+    "account_status",
+    "member",
+    "group_notices",
+    "group_essence",
+    "group_honors",
+    "group_muted",
+    "group_file_folder",
+    "group_file_info",
+    "group_file_url",
+    "recent_contacts",
+    "pending_requests",
+    "forward_message",
+    "friend_categories",
+    "one_way_friends",
+    "profile_likes",
+    "user_status",
+    "group_at_all_remaining",
+    "group_extended",
+    "group_system_messages",
+    "custom_stickers"
+  ],
+  "action_operations": [
+    "send_media",
+    "reply",
+    "forward",
+    "recall",
+    "friend_remark",
+    "group_card",
+    "group_name",
+    "group_notice",
+    "set_nickname",
+    "set_avatar",
+    "set_signature",
+    "publish_qzone",
+    "group_leave",
+    "group_dismiss",
+    "group_kick",
+    "group_ban",
+    "group_whole_ban",
+    "group_admin",
+    "group_special_title",
+    "group_avatar",
+    "group_remark",
+    "group_sign",
+    "group_notice_delete",
+    "essence_set",
+    "essence_delete",
+    "group_poke",
+    "friend_delete",
+    "friend_like",
+    "friend_poke",
+    "friend_request",
+    "group_request",
+    "mark_read",
+    "group_folder_create",
+    "group_folder_delete",
+    "group_file_delete",
+    "group_file_rename",
+    "group_file_move",
+    "group_file_upload",
+    "message_reaction",
+    "send_at",
+    "contact_card",
+    "online_status",
+    "music_card"
+  ],
+  "extended_reads": [
+    "account_status",
+    "member",
+    "group_notices",
+    "group_essence",
+    "group_honors",
+    "group_muted",
+    "group_file_folder",
+    "group_file_info",
+    "group_file_url",
+    "recent_contacts",
+    "pending_requests",
+    "forward_message",
+    "friend_categories",
+    "one_way_friends",
+    "profile_likes",
+    "user_status",
+    "group_at_all_remaining",
+    "group_extended",
+    "group_system_messages",
+    "custom_stickers"
+  ],
+  "extended_actions": [
+    "group_leave",
+    "group_dismiss",
+    "group_kick",
+    "group_ban",
+    "group_whole_ban",
+    "group_admin",
+    "group_special_title",
+    "group_avatar",
+    "group_remark",
+    "group_sign",
+    "group_notice_delete",
+    "essence_set",
+    "essence_delete",
+    "group_poke",
+    "friend_delete",
+    "friend_like",
+    "friend_poke",
+    "friend_request",
+    "group_request",
+    "mark_read",
+    "group_folder_create",
+    "group_folder_delete",
+    "group_file_delete",
+    "group_file_rename",
+    "group_file_move",
+    "group_file_upload",
+    "message_reaction",
+    "send_at",
+    "contact_card",
+    "online_status",
+    "music_card"
+  ],
+  "read_fields": {
+    "user_id": {
+      "type": "string"
+    },
+    "folder_id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "file_id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "busid": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    }
+  },
+  "action_fields": {
+    "enable": {
+      "type": "boolean"
+    },
+    "approve": {
+      "type": "boolean"
+    },
+    "reject_add_request": {
+      "type": "boolean"
+    },
+    "duration": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2592000
+    },
+    "times": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 10
+    },
+    "pending_id": {
+      "type": "string",
+      "pattern": "^qreq_[a-f0-9]{32}$"
+    },
+    "notice_id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "folder_id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "file_id": {
+      "type": "string",
+      "maxLength": 200
+    },
+    "busid": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 2147483647
+    },
+    "emoji_id": {
+      "type": "string",
+      "pattern": "^[0-9]{1,20}$"
+    },
+    "time": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 9999999999999
+    },
+    "mention_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^[1-9][0-9]{4,19}$"
+      },
+      "maxItems": 20
+    },
+    "mention_all": {
+      "type": "boolean"
+    },
+    "contact_kind": {
+      "type": "string",
+      "enum": [
+        "qq",
+        "group"
+      ]
+    },
+    "contact_id": {
+      "type": "string",
+      "pattern": "^[1-9][0-9]{4,19}$"
+    },
+    "online_state": {
+      "type": "string",
+      "enum": [
+        "online",
+        "away",
+        "busy",
+        "qme",
+        "dnd",
+        "invisible"
+      ]
+    },
+    "music_provider": {
+      "type": "string",
+      "enum": [
+        "qq",
+        "163",
+        "kugou",
+        "migu",
+        "kuwo"
+      ]
+    },
+    "music_id": {
+      "type": "string",
+      "pattern": "^[A-Za-z0-9_-]{1,100}$"
+    }
+  },
+  "usage": "group_* require group target_id. Leave sets is_dismiss=false; group_dismiss only for explicit 解散群, never infer from 退群. group_ban needs user_id,duration seconds (0 unbans); whole_ban/admin need enable; kick needs user_id and explicit reject_add_request boolean; special_title uses text (empty clears); avatar uses local path. friend_delete/like/poke require private target; like needs times. Requests first query pending_requests then pass pending_id, exact target and approve; text is optional friend remark/group rejection reason. mark_read needs target_type, time. Files use file_id/folder_id/busid returned by reads: delete needs file_id,busid; rename needs file_id,folder_id,text; move needs file_id,folder_id destination; folder_create uses text, folder_delete folder_id; upload uses local path and optional folder_id. message_reaction needs message_id,emoji_id,enable. essence operations need group target and message_id; group_notice_delete needs notice_id. No fabricated requests, no proactive group joining, no raw API or credentials access. send_at requires group target, exact text and mention_ids or explicit mention_all=true; never infer @all. contact_card requires target_type,target_id,contact_kind qq/group,contact_id. online_status requires private target=bot self and online_state online/away/busy/qme/dnd/invisible. Reads add friend_categories,one_way_friends,profile_likes (bot self),user_status (explicit user target),group_at_all_remaining,group_extended,group_system_messages. Account/contact/system reads belong only in administrator private chat. custom_stickers returns own saved sticker URLs, bounded; music_card requires target_type,target_id,music_provider qq/163/kugou/migu/kuwo and exact music_id (no arbitrary URLs). one_way_friends and user_status depend on NapCat packet support; current installation reports requires_packet_support. Do not report an empty list or offline when unavailable."
+}

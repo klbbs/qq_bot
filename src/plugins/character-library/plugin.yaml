@@ -1,0 +1,7 @@
+name: character-library
+version: 0.1.0
+description: Lightweight local Character Card V1/V2/V3 library using native Hermes personalities.
+provides_tools:
+  - character_library
+provides_cli:
+  - characters

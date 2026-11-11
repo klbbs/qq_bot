@@ -1,0 +1,26 @@
+name: content-research
+version: 1.4.0
+description: Dedicated-account QQ/Bilibili/Weixin messaging and actions, Heybox research/comments, web/RSS news and official DeepSeek balance.
+provides_tools:
+  - content_search
+  - content_read
+  - content_account
+  - content_transcribe
+  - qq_contacts
+  - qq_send
+  - bilibili_article
+  - bilibili_danmaku
+  - bilibili_comment
+  - news_collect
+  - deepseek_balance
+  - platform_capabilities
+  - qq_query
+  - qq_action
+  - bilibili_query
+  - bilibili_action
+  - weixin_contacts
+  - weixin_send
+  - heybox_query
+  - heybox_action
+provides_hooks:
+  - pre_llm_call

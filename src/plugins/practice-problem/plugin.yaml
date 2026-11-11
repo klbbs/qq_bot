@@ -1,0 +1,5 @@
+name: practice-problem
+version: 0.2.0
+description: Read current QQ problem; allow concise solution follow-ups only after verified closure.
+provides_tools:
+  - practice_problem
